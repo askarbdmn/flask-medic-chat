@@ -4,7 +4,7 @@ from transformers import BertTokenizer, BertForSequenceClassification
 import numpy as np
 
 # Load Model dan Tokenizer
-model_path = "intent_classification_model"  # Sesuaikan dengan path model di Railway
+model_path = "intent_classification_model"  # Sesuaikan dengan path model di Render
 tokenizer = BertTokenizer.from_pretrained(model_path)
 model = BertForSequenceClassification.from_pretrained(model_path)
 model.eval()
@@ -35,4 +35,4 @@ def predict():
 
 # Menjalankan API Flask
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=10000)
